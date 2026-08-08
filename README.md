@@ -370,7 +370,7 @@ A Postman collection is included with the project for API testing.
 Import the following file into Postman:
 
 ```text
-AssignmentLnp.postman_collection.json
+AssignmentLnp API.postman_collection.json
 ```
 
 The collection contains requests for:
