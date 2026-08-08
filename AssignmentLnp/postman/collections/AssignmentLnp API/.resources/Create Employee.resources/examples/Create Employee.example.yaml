@@ -1,0 +1,37 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/employee"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \  \"firstName\": \"Dhruv\",\r
+
+      \  \"lastName\": \"Goel\",\r
+
+      \  \"email\": \"Dhruvgoel343@gmail.com\",\r
+
+      \  \"mobile\": \"7827850490\",\r
+
+      \  \"departmentId\": 1,\r
+
+      \  \"salary\": 50000,\r
+
+      \  \"joiningDate\": \"2026-08-08\",\r
+
+      \  \"isActive\": true\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-type: text/plain; charset=utf-8
+    date: Sat, 08 Aug 2026 02:55:01 GMT
+    server: Kestrel
+    transfer-encoding: chunked
+  body:
+    type: text
+    content: Employee created successfully.
+order: 1786157714406

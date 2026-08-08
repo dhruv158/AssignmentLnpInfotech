@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{baseUrl}}/api/employee?search=Dhruv&departmentId=1&isActive=true&sortBy=Salary&ascending=false&pageNumber=1&pageSize=10"
+method: GET
+queryParams:
+  search: Dhruv
+  departmentId: "1"
+  isActive: "true"
+  sortBy: Salary
+  ascending: "false"
+  pageNumber: "1"
+  pageSize: "10"
+examples: .resources/Get Employees - Search Filter Pagination.resources/examples
+order: 4391759585348494

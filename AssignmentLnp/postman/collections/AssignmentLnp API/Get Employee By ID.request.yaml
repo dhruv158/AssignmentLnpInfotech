@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{baseUrl}}/api/employee/1"
+method: GET
+examples: .resources/Get Employee By ID.resources/examples
+order: 1105597080794381

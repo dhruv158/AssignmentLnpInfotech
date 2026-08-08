@@ -1,0 +1,28 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/employee/1"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-type: application/json; charset=utf-8
+    date: Sat, 08 Aug 2026 02:50:30 GMT
+    server: Kestrel
+    transfer-encoding: chunked
+  body:
+    type: json
+    content: |-
+      {
+        "id": 1,
+        "firstName": "ddd",
+        "lastName": "string",
+        "email": "user@example.com",
+        "mobile": "7878676767",
+        "departmentId": 1,
+        "salary": 0,
+        "joiningDate": "2026-08-05T04:37:51.269",
+        "isActive": true,
+        "departmentName": null
+      }
+order: 1786157547708

@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{baseUrl}}/api/department/1"
+method: GET
+examples: .resources/Get Department By ID.resources/examples
+order: 4503441410617625

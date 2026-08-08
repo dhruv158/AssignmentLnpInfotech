@@ -1,0 +1,5 @@
+$kind: http-request
+url: https://localhost:7117/api/employee
+method: GET
+examples: .resources/Get All Employees.resources/examples
+order: 1786157084911

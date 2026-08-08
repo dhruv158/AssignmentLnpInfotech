@@ -1,0 +1,30 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/department"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-type: application/json; charset=utf-8
+    date: Sat, 08 Aug 2026 02:59:52 GMT
+    server: Kestrel
+    transfer-encoding: chunked
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": 1,
+          "name": "HR",
+          "isActive": true,
+          "createdDate": "2026-08-05T03:33:22.522348"
+        },
+        {
+          "id": 2,
+          "name": "IT",
+          "isActive": true,
+          "createdDate": "2026-08-05T04:45:17.3895793"
+        }
+      ]
+order: 1786157999695

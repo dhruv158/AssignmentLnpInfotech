@@ -1,0 +1,39 @@
+$kind: http-example
+name: Get Employees - Search Filter Pagination
+request:
+  url: "{{baseUrl}}/api/employee?search=Dhruv&departmentId=1&isActive=true&sortBy=Salary&ascending=false&pageNumber=1&pageSize=10"
+  method: GET
+  queryParams:
+    search: Dhruv
+    departmentId: "1"
+    isActive: "true"
+    sortBy: Salary
+    ascending: "false"
+    pageNumber: "1"
+    pageSize: "10"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-type: application/json; charset=utf-8
+    date: Sat, 08 Aug 2026 02:55:56 GMT
+    server: Kestrel
+    transfer-encoding: chunked
+  body:
+    type: json
+    content: |-
+      [
+        {
+          "id": 5,
+          "firstName": "Dhruv",
+          "lastName": "Goel",
+          "email": "Dhruvgoel343@gmail.com",
+          "mobile": "7827850490",
+          "departmentId": 1,
+          "salary": 50000,
+          "joiningDate": "2026-08-08T00:00:00",
+          "isActive": true,
+          "departmentName": "HR"
+        }
+      ]
+order: 2261033147669967

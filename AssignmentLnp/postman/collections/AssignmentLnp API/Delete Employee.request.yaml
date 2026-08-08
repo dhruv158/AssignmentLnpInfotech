@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{baseUrl}}/api/employee/1"
+method: DELETE
+examples: .resources/Delete Employee.resources/examples
+order: 4495995504447168

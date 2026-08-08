@@ -1,0 +1,25 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/department"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \  \"name\": \"Programming\",\r
+
+      \  \"isActive\": true\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-type: text/plain; charset=utf-8
+    date: Sat, 08 Aug 2026 03:01:42 GMT
+    server: Kestrel
+    transfer-encoding: chunked
+  body:
+    type: text
+    content: Department created successfully.
+order: 1786158108117

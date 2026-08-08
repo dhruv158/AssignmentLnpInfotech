@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/api/department"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Programming\",\r
+
+    \  \"isActive\": true\r
+
+    }"
+examples: .resources/Create Department.resources/examples
+order: 4503520686326108

@@ -1,0 +1,504 @@
+{
+  "info": {
+    "_postman_id": "3e437EA56a7834d32c0cd3dd",
+    "name": "AssignmentLnp API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Employees",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7117/api/employee",
+          "protocol": "https",
+          "host": ["localhost"],
+          "port": "7117",
+          "path": ["api", "employee"]
+        }
+      },
+      "response": [
+        {
+          "name": "Get All Employees",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7117/api/employee",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7117",
+              "path": ["api", "employee"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "content-type", "value": "application/json; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 02:47:29 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "[\n  {\n    \"id\": 1,\n    \"firstName\": \"ddd\",\n    \"lastName\": \"string\",\n    \"email\": \"user@example.com\",\n    \"mobile\": \"7878676767\",\n    \"departmentId\": 1,\n    \"salary\": 0,\n    \"joiningDate\": \"2026-08-05T04:37:51.269\",\n    \"isActive\": true,\n    \"departmentName\": \"HR\"\n  }\n]"
+        },
+        {
+          "name": "Get All Employees",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7117/api/employee",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7117",
+              "path": ["api", "employee"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "content-type", "value": "application/json; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 03:24:19 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "[\n  {\n    \"id\": 5,\n    \"firstName\": \"Dhruv\",\n    \"lastName\": \"Goel\",\n    \"email\": \"Dhruvgoel343@gmail.com\",\n    \"mobile\": \"7827850490\",\n    \"departmentId\": 1,\n    \"salary\": 50000,\n    \"joiningDate\": \"2026-08-08T00:00:00\",\n    \"isActive\": true,\n    \"departmentName\": \"HR\"\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Employee By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/employee/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "employee", "1"]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Employee By ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/employee/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "employee", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "content-type", "value": "application/json; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 02:50:30 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "{\n  \"id\": 1,\n  \"firstName\": \"ddd\",\n  \"lastName\": \"string\",\n  \"email\": \"user@example.com\",\n  \"mobile\": \"7878676767\",\n  \"departmentId\": 1,\n  \"salary\": 0,\n  \"joiningDate\": \"2026-08-05T04:37:51.269\",\n  \"isActive\": true,\n  \"departmentName\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Employees - Search Filter Pagination",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/employee?search=Dhruv&departmentId=1&isActive=true&sortBy=Salary&ascending=false&pageNumber=1&pageSize=10",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "employee"],
+          "query": [
+            { "key": "search", "value": "Dhruv" },
+            { "key": "departmentId", "value": "1" },
+            { "key": "isActive", "value": "true" },
+            { "key": "sortBy", "value": "Salary" },
+            { "key": "ascending", "value": "false" },
+            { "key": "pageNumber", "value": "1" },
+            { "key": "pageSize", "value": "10" }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Employees - Search Filter Pagination",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/employee?search=dd&departmentId=1&isActive=true&sortBy=Salary&ascending=false&pageNumber=1&pageSize=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "employee"],
+              "query": [
+                { "key": "search", "value": "dd" },
+                { "key": "departmentId", "value": "1" },
+                { "key": "isActive", "value": "true" },
+                { "key": "sortBy", "value": "Salary" },
+                { "key": "ascending", "value": "false" },
+                { "key": "pageNumber", "value": "1" },
+                { "key": "pageSize", "value": "10" }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "content-type", "value": "application/json; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 02:51:51 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "[\n  {\n    \"id\": 1,\n    \"firstName\": \"ddd\",\n    \"lastName\": \"string\",\n    \"email\": \"user@example.com\",\n    \"mobile\": \"7878676767\",\n    \"departmentId\": 1,\n    \"salary\": 0,\n    \"joiningDate\": \"2026-08-05T04:37:51.269\",\n    \"isActive\": true,\n    \"departmentName\": \"HR\"\n  }\n]"
+        },
+        {
+          "name": "Get Employees - Search Filter Pagination",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/employee?search=Dhruv&departmentId=1&isActive=true&sortBy=Salary&ascending=false&pageNumber=1&pageSize=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "employee"],
+              "query": [
+                { "key": "search", "value": "Dhruv" },
+                { "key": "departmentId", "value": "1" },
+                { "key": "isActive", "value": "true" },
+                { "key": "sortBy", "value": "Salary" },
+                { "key": "ascending", "value": "false" },
+                { "key": "pageNumber", "value": "1" },
+                { "key": "pageSize", "value": "10" }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "content-type", "value": "application/json; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 02:55:56 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "[\n  {\n    \"id\": 5,\n    \"firstName\": \"Dhruv\",\n    \"lastName\": \"Goel\",\n    \"email\": \"Dhruvgoel343@gmail.com\",\n    \"mobile\": \"7827850490\",\n    \"departmentId\": 1,\n    \"salary\": 50000,\n    \"joiningDate\": \"2026-08-08T00:00:00\",\n    \"isActive\": true,\n    \"departmentName\": \"HR\"\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Create Employee",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"firstName\": \"Dhruv\",\r\n  \"lastName\": \"Goel\",\r\n  \"email\": \"Dhruvgoel343@gmail.com\",\r\n  \"mobile\": \"7827850490\",\r\n  \"departmentId\": 1,\r\n  \"salary\": 50000,\r\n  \"joiningDate\": \"2026-08-08\",\r\n  \"isActive\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/employee",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "employee"]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Employee",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Dhruv\",\r\n  \"lastName\": \"Goel\",\r\n  \"email\": \"Dhruvgoel343@gmail.com\",\r\n  \"mobile\": \"7827850490\",\r\n  \"departmentId\": 1,\r\n  \"salary\": 50000,\r\n  \"joiningDate\": \"2026-08-08\",\r\n  \"isActive\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/employee",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "employee"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "text",
+          "header": [
+            { "key": "content-type", "value": "text/plain; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 02:55:01 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "Employee created successfully."
+        }
+      ]
+    },
+    {
+      "name": "Update Employee",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id\": 1,\r\n  \"firstName\": \"Dhruv\",\r\n  \"lastName\": \"Updated\",\r\n  \"email\": \"Dhruvgoel343@gmail.com\",\r\n  \"mobile\": \"7878787878\",\r\n  \"departmentId\": 1,\r\n  \"salary\": 55000,\r\n  \"joiningDate\": \"2026-08-08\",\r\n  \"isActive\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/employee",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "employee"]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Employee",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 1,\r\n  \"firstName\": \"Dhruv\",\r\n  \"lastName\": \"Updated\",\r\n  \"email\": \"Dhruvgoel343@gmail.com\",\r\n  \"mobile\": \"7878787878\",\r\n  \"departmentId\": 1,\r\n  \"salary\": 55000,\r\n  \"joiningDate\": \"2026-08-08\",\r\n  \"isActive\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/employee",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "employee"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "text",
+          "header": [
+            { "key": "content-type", "value": "text/plain; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 02:57:37 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "Employee updated successfully."
+        }
+      ]
+    },
+    {
+      "name": "Delete Employee",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/employee/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "employee", "1"]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete Employee",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/employee/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "employee", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "text",
+          "header": [
+            { "key": "content-type", "value": "text/plain; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 02:58:28 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "Employee deleted successfully."
+        }
+      ]
+    },
+    {
+      "name": "Get All Departments",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/department",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "department"]
+        }
+      },
+      "response": [
+        {
+          "name": "Get All Departments",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/department",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "department"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "content-type", "value": "application/json; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 02:59:52 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"HR\",\n    \"isActive\": true,\n    \"createdDate\": \"2026-08-05T03:33:22.522348\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"IT\",\n    \"isActive\": true,\n    \"createdDate\": \"2026-08-05T04:45:17.3895793\"\n  }\n]"
+        },
+        {
+          "name": "Get All Departments",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/department",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "department"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "content-type", "value": "application/json; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 03:01:56 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "[\n  {\n    \"id\": 1,\n    \"name\": \"HR\",\n    \"isActive\": true,\n    \"createdDate\": \"2026-08-05T03:33:22.522348\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"IT\",\n    \"isActive\": true,\n    \"createdDate\": \"2026-08-05T04:45:17.3895793\"\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Programming\",\n    \"isActive\": true,\n    \"createdDate\": \"2026-08-08T03:01:43.7242595\"\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Department By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/department/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "department", "1"]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Department By ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/department/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "department", "1"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            { "key": "content-type", "value": "application/json; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 03:00:27 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "{\n  \"id\": 1,\n  \"name\": \"HR\",\n  \"isActive\": true,\n  \"createdDate\": \"2026-08-05T03:33:22.522348\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Department",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Programming\",\r\n  \"isActive\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/department",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "department"]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Department",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Programming\",\r\n  \"isActive\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/department",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "department"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "text",
+          "header": [
+            { "key": "content-type", "value": "text/plain; charset=utf-8" },
+            { "key": "date", "value": "Sat, 08 Aug 2026 03:01:42 GMT" },
+            { "key": "server", "value": "Kestrel" },
+            { "key": "transfer-encoding", "value": "chunked" }
+          ],
+          "body": "Department created successfully."
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": ""
+    }
+  ]
+}

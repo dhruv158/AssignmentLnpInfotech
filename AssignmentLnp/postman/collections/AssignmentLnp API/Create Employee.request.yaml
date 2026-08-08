@@ -1,0 +1,26 @@
+$kind: http-request
+url: "{{baseUrl}}/api/employee"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"firstName\": \"Dhruv\",\r
+
+    \  \"lastName\": \"Goel\",\r
+
+    \  \"email\": \"Dhruvgoel343@gmail.com\",\r
+
+    \  \"mobile\": \"7827850490\",\r
+
+    \  \"departmentId\": 1,\r
+
+    \  \"salary\": 50000,\r
+
+    \  \"joiningDate\": \"2026-08-08\",\r
+
+    \  \"isActive\": true\r
+
+    }"
+examples: .resources/Create Employee.resources/examples
+order: 4415259616337712

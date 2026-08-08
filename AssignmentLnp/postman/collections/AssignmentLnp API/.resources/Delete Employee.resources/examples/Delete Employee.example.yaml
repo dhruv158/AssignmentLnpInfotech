@@ -1,0 +1,16 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/employee/1"
+  method: DELETE
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    content-type: text/plain; charset=utf-8
+    date: Sat, 08 Aug 2026 02:58:28 GMT
+    server: Kestrel
+    transfer-encoding: chunked
+  body:
+    type: text
+    content: Employee deleted successfully.
+order: 1786157914185
